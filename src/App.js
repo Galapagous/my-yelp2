@@ -7,6 +7,7 @@ import { withAuthenticator, Button, Heading } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
 import "./app.scss"
 import Photo from "./components/Assets/yp-2.jpg"
+import Logo from "./images/yelp.png"
 import awsExports from "./aws-exports";
 import RestaurantCard from './components/RestaurantCard/RestaurantCard';
 Amplify.configure(awsExports);
@@ -49,6 +50,7 @@ const App = ({ signOut, user }) => {
     <div className='container'>
     <div className='top-bar'>
       <Heading className='head' level={1}>Hello {user.attributes.email.split("@")[0]}</Heading>
+      <img src={Logo} alt='yelp logo'/>
       <Button onClick={signOut}>Sign out</Button>
     </div>
       <Button onClick={()=>{setShowAdd(!showAdd)}}>Add New</Button>
