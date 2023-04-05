@@ -17,6 +17,9 @@
       },
       "auth": {
         "yelp380ede1a7": {}
+      },
+      "hosting": {
+        "S3AndCloudFront": {}
       }
     }
   }
